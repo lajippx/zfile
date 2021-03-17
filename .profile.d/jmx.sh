@@ -3,7 +3,7 @@
 
 BIN_DIR=`pwd`
 DEPLOY_DIR=`pwd`
-pwd && ls
+ls /app/src
 CLASSES=WEB-INF/classes
 MAIN=im.zhaojun.zfile.ZfileApplication
 JMX_HOST_NAME=0.0.0.0
