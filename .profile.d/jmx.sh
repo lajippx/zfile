@@ -4,7 +4,7 @@
 BIN_DIR=`pwd`
 cd ..
 DEPLOY_DIR=`pwd`
-pwd
+pwd && ls
 CLASSES=WEB-INF/classes
 MAIN=im.zhaojun.zfile.ZfileApplication
 JMX_HOST_NAME=0.0.0.0
