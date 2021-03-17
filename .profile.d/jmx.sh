@@ -4,7 +4,7 @@
 BIN_DIR=`pwd`
 cd ..
 DEPLOY_DIR=`pwd`
-CLASSES=/WEB-INF/classes
+CLASSES=WEB-INF/classes
 echo "apm home: $APM_AGENT_HOME"
 MAIN=im.zhaojun.zfile.ZfileApplication
 JMX_HOST_NAME=0.0.0.0
