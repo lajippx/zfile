@@ -2,7 +2,6 @@
 
 
 BIN_DIR=`pwd`
-cd ..
 DEPLOY_DIR=`pwd`
 pwd && ls
 CLASSES=WEB-INF/classes
