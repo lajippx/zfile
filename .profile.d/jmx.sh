@@ -1,7 +1,6 @@
 #!/bin/bash
 
-source /etc/profile
-cd `dirname $0`
+
 BIN_DIR=`pwd`
 cd ..
 DEPLOY_DIR=`pwd`
@@ -62,11 +61,4 @@ JAVA_JMX_OPTS=""
 if [ "$1" = "jmx" ]; then
     JAVA_JMX_OPTS=" -Djava.rmi.server.hostname=$JMX_HOST_NAME -Dcom.sun.management.jmxremote.port=$JMX_PORT -Dcom.sun.management.jmxremote.ssl=false -Dcom.sun.management.jmxremote.authenticate=false "
 fi
-
-echo -e "Starting the $SERVER_NAME ...\c"
-nohup java $JAVA_OPTS $JAVA_MEM_OPTS $JAVA_DEBUG_OPTS $JAVA_JMX_OPTS -classpath $CLASSES:$LIB_JARS $MAIN $OPTS > /dev/null 2>&1 < /dev/null &
-
-echo "OK!"
-PIDS=`ps aux | grep java | grep "$DEPLOY_DIR" | awk '{print $2}'`
-echo "PID: $PIDS"
 
